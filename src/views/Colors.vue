@@ -66,59 +66,59 @@
                 <br />
                 <div v-if="sets.c">
                     <div>/* color */</div>
-                    <div v-for="(v,i) in vars" :key="i">.c-{{prefix.key}}{{prefix.val}}{{v.key}} {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.c-{{prefix.key}}{{prefix.val}}{{v.key}} {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.ch">
                     <div>/* :hover color */</div>
-                    <div v-for="(v,i) in vars" :key="i">.c-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.c-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bg">
                     <div>/* background-color */</div>
-                    <div v-for="(v,i) in vars" :key="i">.bg-{{prefix.key}}{{prefix.val}}{{v.key}} {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.bg-{{prefix.key}}{{prefix.val}}{{v.key}} {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bgh">
                     <div>/* :hover background-color */</div>
-                    <div v-for="(v,i) in vars" :key="i">.bg-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.bg-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.b">
                     <div>/* border */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-{{prefix.key}}{{prefix.val}}{{v.key}} {border: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-{{prefix.key}}{{prefix.val}}{{v.key}} {border: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bh">
                     <div>/* :hover border */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bt">
                     <div>/* border-top */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-t-{{prefix.key}}{{prefix.val}}{{v.key}} {border-top: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-t-{{prefix.key}}{{prefix.val}}{{v.key}} {border-top: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.br">
                     <div>/* border-right */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-r-{{prefix.key}}{{prefix.val}}{{v.key}} {border-right: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-r-{{prefix.key}}{{prefix.val}}{{v.key}} {border-right: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bb">
                     <div>/* border-bottom */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-b-{{prefix.key}}{{prefix.val}}{{v.key}} {border-bottom: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-b-{{prefix.key}}{{prefix.val}}{{v.key}} {border-bottom: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bl">
                     <div>/* border-left */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-l-{{prefix.key}}{{prefix.val}}{{v.key}} {border-left: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-l-{{prefix.key}}{{prefix.val}}{{v.key}} {border-left: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bth">
                     <div>/* :hover border-top */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-t-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-top: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-t-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-top: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.brh">
                     <div>/* :hover border-right */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-r-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-right: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-r-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-right: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.bbh">
                     <div>/* :hover border-bottom */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-b-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-bottom: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-b-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-bottom: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.blh">
                     <div>/* :hover border-left */</div>
-                    <div v-for="(v,i) in vars" :key="i">.b-l-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-left: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;transition: {{prefix.trans}};}</div><br />
+                    <div v-for="(v,i) in vars" :key="i">.b-l-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {border-left: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 1px solid;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
             </div>
         </div>
