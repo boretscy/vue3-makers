@@ -127,7 +127,7 @@
                     <div>/* border-radius-bottom-rigth */</div>
                     <div v-for="(v,i) in vars.radius" :key="i">.b-radius-br-{{prefix.key}}{{prefix.val}}{{v.key}} {border-radius: 0 0 var(--{{prefix.key}}{{prefix.val}}{{v.key}}) 0;}</div><br />
                 </div>
-                <div v-if="sets.rbr">
+                <div v-if="sets.rbl">
                     <div>/* border-radius-bottom-left */</div>
                     <div v-for="(v,i) in vars.radius" :key="i">.b-radius-bl-{{prefix.key}}{{prefix.val}}{{v.key}} {border-radius: 0 0 0 var(--{{prefix.key}}{{prefix.val}}{{v.key}});}</div><br />
                 </div>
