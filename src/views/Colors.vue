@@ -72,6 +72,10 @@
                     <div>/* :hover color */</div>
                     <div v-for="(v,i) in vars" :key="i">.c-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
+                <div v-if="sets.ca">
+                    <div>/* :active color */</div>
+                    <div v-for="(v,i) in vars" :key="i">.c-a-{{prefix.key}}{{prefix.val}}{{v.key}}:active {color: var(--{{prefix.key}}{{prefix.val}}{{v.key}}) !important;{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
+                </div>
                 <div v-if="sets.bg">
                     <div>/* background-color */</div>
                     <div v-for="(v,i) in vars" :key="i">.bg-{{prefix.key}}{{prefix.val}}{{v.key}} {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
@@ -79,6 +83,10 @@
                 <div v-if="sets.bgh">
                     <div>/* :hover background-color */</div>
                     <div v-for="(v,i) in vars" :key="i">.bg-h-{{prefix.key}}{{prefix.val}}{{v.key}}:hover {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
+                </div>
+                <div v-if="sets.bgh">
+                    <div>/* :active background-color */</div>
+                    <div v-for="(v,i) in vars" :key="i">.bg-a-{{prefix.key}}{{prefix.val}}{{v.key}}:active {background-color: var(--{{prefix.key}}{{prefix.val}}{{v.key}});{{(prefix.trans.length)?'transition: '+prefix.trans+';':''}}}</div><br />
                 </div>
                 <div v-if="sets.b">
                     <div>/* border */</div>
@@ -133,8 +141,10 @@ export default {
             sets: {
                 c: true,
                 ch: true,
+                ca: true,
                 bg: true,
                 bgh: true,
+                bga: true,
                 b: true,
                 bh: true,
                 bt: true,
